@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jQuery Linky Examples</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="url">
+            https://github.com/AnSavvides should turn into a link, while <a href="https://twitter.com/andreassavvides">this link should stay untouched</a>.
+        </div>
+        <div class="twitter-mentions">
+            @andreassavvides should get highlighted! Not an e-mail such as hello@example.com though.
+        </div>
+        <div class="instagram-mentions">
+            We do instagram too! Check out @instagram!
+        </div>
+        <div class="hashtags">
+            Need hashtags linkified? Don't worry - #wegotyoucovered!
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="jquery.linky.js"></script>
+        <script>
+            $(".url").linky();
+
+            $(".twitter-mentions").linky({
+                mentions: true,
+                urls: false,
+                linkTo: "twitter"
+            });
+
+            $(".instagram-mentions").linky({
+                mentions: true,
+                urls: false,
+                linkTo: "instagram"
+            });
+
+            $(".hashtags").linky({
+                hashtags: true,
+                urls: false,
+                linkTo: "twitter"
+            });
+        </script>
+    </body>
+</html>
