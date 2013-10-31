@@ -1,5 +1,5 @@
 /**
- * jquery.linky.js v0.1.0
+ * jquery.linky.js v0.1.1
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
@@ -44,7 +44,9 @@
             // Linkifying URLs
             if (extendedOptions.urls) {
                 matches = elContent.match(urlRegEx);
-                elContent = _linkifyUrls(matches, elContent);
+                if (matches) {
+                    elContent = _linkifyUrls(matches, elContent);
+                }
             }
 
             // Linkifying mentions
