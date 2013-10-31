@@ -9,6 +9,9 @@ The only dependency is [jQuery](http://jquery.com/).
 
 All you have to do is include [`jquery.linky.js`](jquery.inky.js) or [`jquery.linky.min.js`](jquery.linky.min.js) just after you've included `jQuery` and you are all set.
 
+### Install using Bower
+Linky is also available as a Bower package; you can simply install it by doing `bower install jquery.linky`.
+
 ### Linky takes the following options:
 * `mentions` - boolean field to identify if mentions should be linkified. `false` by default.
 * `hashtags` - boolean field to identify if hashtags should be linkified. `false` by default.
