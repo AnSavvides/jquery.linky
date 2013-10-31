@@ -1,2 +1,74 @@
-jquery.linky
-============
+Linky
+=====
+
+Linky is a jQuery plugin for linkifying URLs, mentions (for Twitter or Instagram) and hashtags (for Twitter); that is, taking plain text references of URLs, mentions and hashtags and turning them to the appropriate links.
+
+## Usage
+
+The only dependency is [jQuery](http://jquery.com/).
+
+All you have to do is include [`jquery.linky.js`](jquery.inky.js) or [`jquery.linky.min.js`](jquery.linky.min.js) just after you've included `jQuery` and you are all set.
+
+### Linky takes the following options:
+* `mentions` - boolean field to identify if mentions should be linkified. `false` by default.
+* `hashtags` - boolean field to identify if hashtags should be linkified. `false` by default.
+* `urls` - boolean field to identify if URLs should be linkified. `true` by default.
+* `linkTo` - String identifying what location linkified mentions and hashtags should link to; this supports `"twitter"` and `"instagram"`. `"twitter"` by default.
+
+### Example
+
+Linky would come in handy if you are pulling data from any of Twitter's or Instagram's APIs where you will end up having just a plain text string like below:
+
+`@andreassavvides works on his #opensource projects over at https://github.com/AnSavvides`
+
+If you are displaying this information in your UI, you would want to linkify any mentions, hashtags and/or URLs. Linky does exactly that, giving you control over what you want linkified. In this case, let's linkify everything given a `div` containing the aforementioned tweet:
+
+```html
+<div class="tweet">
+    @andreassavvides works on his #opensource projects over at https://github.com/AnSavvides        
+</div>
+```
+
+```js
+$(".tweet").linkify({
+    mentions: true,
+    hashtags: true,
+    urls: true,
+    linkTo: "twitter"
+});
+```
+
+This would transform the `div`'s content to the following:
+
+```html
+<div class="url">
+    <a href="https://twitter.com/andreassavvides" target="_blank">@andreassavvides</a> works on his <a href="https://twitter.com/search?q=opensource" target="_blank">#opensource</a> projects over at <a href="https://github.com/AnSavvides" target="_blank">https://github.com/AnSavvides</a>
+</div>
+```
+
+Have a look at [examples.html](examples.html) for more examples.
+
+## Contributing
+All contributions are welcome; just fork the repository, make your changes and open a pull request.
+
+## License
+The MIT License (MIT)
+
+Copyright (c) 2013 Andreas Savvides
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
