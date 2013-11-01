@@ -3,14 +3,17 @@
   "main": "jquery.linky.js",
   "version": "0.1.3",
   "homepage": "https://github.com/AnSavvides/jquery.linky",
-  "description": "Linky is a jQuery plugin for linkifying URLs, mentions (for Twitter or Instagram) and hashtags (for Twitter)",
+  "description": "Linkify URLs, mentions (Twitter, Instagram, GitHub) and hashtags (Twitter)",
   "keywords": [
     "jquery",
     "linky",
     "linkifying",
     "mentions",
     "hashtags",
-    "urls"
+    "urls",
+    "twitter",
+    "instagram",
+    "github"
   ],
   "authors": [
     "Andreas Savvides"
