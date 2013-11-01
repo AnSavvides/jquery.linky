@@ -1,5 +1,5 @@
 /**
- * jquery.linky.js v0.1.1
+ * jquery.linky.js v0.1.2
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
