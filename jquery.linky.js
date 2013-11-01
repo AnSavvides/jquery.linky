@@ -1,5 +1,5 @@
 /**
- * jquery.linky.js v0.1.2
+ * jquery.linky.js v0.1.3
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
@@ -27,6 +27,10 @@
                 instagram: {
                     baseUrl: "http://instagram.com/",
                     hashtagSearchUrl: null // Doesn't look like there is one?
+                },
+                github: {
+                    baseUrl: "https://github.com/",
+                    hashtagSearchUrl: null
                 }
             },
             defaultOptions = {
