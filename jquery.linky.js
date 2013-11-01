@@ -27,6 +27,10 @@
                 instagram: {
                     baseUrl: "http://instagram.com/",
                     hashtagSearchUrl: null // Doesn't look like there is one?
+                },
+                github: {
+                    baseUrl: "https://github.com/",
+                    hashtagSearchUrl: null
                 }
             },
             defaultOptions = {

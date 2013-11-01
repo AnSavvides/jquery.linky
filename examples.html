@@ -20,6 +20,9 @@
         <div class="hashtags">
             Need hashtags linkified? Don't worry - #wegotyoucovered!
         </div>
+        <div class="github-mentions">
+            You can find @AnSavvides on GitHub!
+        </div>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="jquery.linky.js"></script>
         <script>
@@ -41,6 +44,11 @@
                 hashtags: true,
                 urls: false,
                 linkTo: "twitter"
+            });
+
+            $(".github-mentions").linky({
+                mentions: true,
+                linkTo: "github"
             });
         </script>
     </body>
