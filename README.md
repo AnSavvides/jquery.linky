@@ -12,11 +12,13 @@ All you have to do is include [`jquery.linky.js`](jquery.inky.js) or [`jquery.li
 ### Install using Bower
 Linky is also available as a Bower package; you can simply install it by doing `bower install jquery.linky`.
 
-### Linky takes the following options:
-* `mentions` - boolean field to identify if mentions should be linkified. `false` by default.
-* `hashtags` - boolean field to identify if hashtags should be linkified. `false` by default.
-* `urls` - boolean field to identify if URLs should be linkified. `true` by default.
-* `linkTo` - String identifying what location linkified mentions and hashtags should link to; this supports `"twitter"` and `"instagram"`. `"twitter"` by default.
+### Options
+| Option        | Default     | Type         | Description |
+| ------------- |:-----------:| ------------:| -----------:|
+| mentions      | `false`     | `boolean`    | Identify if mentions should be linkified. |
+| hashtags      | `false`     | `boolean`    | Identify if hashtags should be linkified. |
+| urls          | `true`      | `boolean`    | Identify if URLs should be linkified. |
+| linkTo        | `"twitter"` |  `string`    | Identify location mentions and hashtags should link to|
 
 ### Example
 
