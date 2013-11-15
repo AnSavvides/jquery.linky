@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Linky Tests</title>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qunit/1.12.0/qunit.min.css">
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div class="url-without-link">
+            https://github.com/AnSavvides should turn into a link
+        </div>
+        <div class="url-with-link">
+            <a href="https://twitter.com/andreassavvides">This link should stay untouched</a>. While https://github.com/AnSavvides should turn into a link.
+        </div>
+        <div class="twitter-mentions">
+            @andreassavvides should get highlighted! Not an e-mail such as hello@example.com though.
+        </div>
+        <div class="instagram-mentions">
+            We do instagram too! Check out @instagram!
+        </div>
+        <div class="hashtags">
+            Need hashtags linkified? Don't worry - #wegotyoucovered!
+        </div>
+        <div class="github-mentions">
+            You can find @AnSavvides on GitHub!
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/qunit/1.12.0/qunit.min.js"></script>
+        <script src="/jquery.linky.js"></script>
+        <script>
+            QUnit.test("Linkify URLs", function(assert) {
+                var expectedResponse = "<a href=\"https://github.com/AnSavvides\" target=\"_blank\">https://github.com/AnSavvides</a> should turn into a link";
+
+                $(".url-without-link").linky();
+                assert.equal(
+                    $(".url-without-link").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified URL."
+                );
+
+                expectedResponse = "<a href=\"https://twitter.com/andreassavvides\">This link should stay untouched</a>. While <a href=\"https://github.com/AnSavvides\" target=\"_blank\">https://github.com/AnSavvides</a> should turn into a link.";
+
+                $(".url-with-link").linky();
+                assert.equal(
+                    $(".url-with-link").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified URL and a link that has remained unchanged."
+                );
+
+                expectedResponse = "<a href=\"https://twitter.com/andreassavvides\" target=\"_blank\">@andreassavvides</a> should get highlighted! Not an e-mail such as hello@example.com though.";
+
+                $(".twitter-mentions").linky({ mentions: true, urls: false, linkTo: "twitter" });
+                assert.equal(
+                    $(".twitter-mentions").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified twitter mention"
+                );
+
+                expectedResponse = "We do instagram too! Check out <a href=\"http://instagram.com/instagram\" target=\"_blank\">@instagram</a>!";
+
+                $(".instagram-mentions").linky({ mentions: true, urls: false, linkTo: "instagram" });
+                assert.equal(
+                    $(".instagram-mentions").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified instagram mention"
+                );
+
+                expectedResponse = "Need hashtags linkified? Don't worry - <a href=\"https://twitter.com/search?q=wegotyoucovered\" target=\"_blank\">#wegotyoucovered</a>!";
+
+                $(".hashtags").linky({ hashtags: true, urls: false, linkTo: "twitter" });
+                assert.equal(
+                    $(".hashtags").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified twitter hashtag"
+                );
+
+                expectedResponse = "You can find <a href=\"https://github.com/AnSavvides\" target=\"_blank\">@AnSavvides</a> on GitHub!";
+
+                $(".github-mentions").linky({ mentions: true, linkTo: "github" });
+                assert.equal(
+                    $(".github-mentions").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified github mention"
+                );
+            });
+        </script>
+    </body>
+</html>
