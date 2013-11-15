@@ -1,5 +1,5 @@
 /**
- * jquery.linky.js v0.1.4
+ * jquery.linky.js v0.1.5
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
@@ -49,7 +49,7 @@
             if (extendedOptions.urls) {
                 matches = elContent.match(urlRegEx);
                 if (matches) {
-                    elContent = _linkifyUrls(matches, elContent);
+                    elContent = _linkifyUrls(matches, $el);
                 }
             }
 
@@ -68,11 +68,13 @@
 
     // For any URLs present, unless they are already identified within
     // an `a` element, linkify them.
-    function _linkifyUrls(matches, elContent) {
+    function _linkifyUrls(matches, $el) {
+        var elContent = $el.html();
+
         $.each(matches, function() {
             // Only linkify URLs that are not already identified as
             // `a` elements with an `href`.
-            if ($("a[href='" + this + "']").length === 0) {
+            if ($el.find("a[href='" + this + "']").length === 0) {
                 elContent = elContent.replace(this, "<a href='" + this + "' target='_blank'>" + this + "</a>");
             }
         });
