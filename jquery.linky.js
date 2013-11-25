@@ -1,5 +1,5 @@
 /**
- * jquery.linky.js v0.1.5
+ * jquery.linky.js v0.1.6
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
@@ -10,7 +10,7 @@
     "use strict";
 
     $.fn.linky = function(options) {
-        this.each(function() {
+        return this.each(function() {
             var $el = $(this),
                 linkifiedContent = _linkify($el, options);
 
