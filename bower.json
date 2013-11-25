@@ -16,7 +16,10 @@
     "github"
   ],
   "authors": [
-    "Andreas Savvides"
+    {
+      "name": "Andreas Savvides",
+      "email": "andreas@nibbli.com"
+    }
   ],
   "license": "MIT",
   "ignore": [
