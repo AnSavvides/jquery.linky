@@ -53,8 +53,11 @@ This would transform the `div`'s content to the following:
 
 Have a look at [examples.html](examples.html) for more examples.
 
+## Tests
+Unit testing is done using [QUnit](http://qunitjs.com/); all tests can be found under the [tests](tests) folder.
+
 ## Contributing
-All contributions are welcome; just fork the repository, make your changes and open a pull request.
+All contributions are welcome; just fork the repository, make your changes and open a pull request. Don't forget to add tests if applicable!
 
 ## License
 The MIT License (MIT)
