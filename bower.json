@@ -25,5 +25,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "repository": {
+    "type": "git", "url": "git://github.com/AnSavvides/jquery.linky.git"
+  }
 }
