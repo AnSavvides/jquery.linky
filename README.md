@@ -3,6 +3,10 @@ Linky
 
 Linky is a jQuery plugin for linkifying URLs, mentions (for Twitter, Instagram or GitHub) and hashtags (for Twitter); that is, taking plain text references of URLs, mentions and hashtags and turning them to the appropriate links. Existing linkified URLs are kept untouched.
 
+## Changes
+
+This fork @MarQuisKnox adds the option to link locally
+
 ## Usage
 
 The only dependency is [jQuery](http://jquery.com/).
