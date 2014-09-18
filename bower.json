@@ -1,7 +1,7 @@
 {
   "name": "jquery.linky",
   "main": "jquery.linky",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "homepage": "http://ansavvides.github.io/jquery.linky/",
   "description": "Linkify URLs, mentions (Twitter, Instagram, GitHub) and hashtags (Twitter)",
   "keywords": [
