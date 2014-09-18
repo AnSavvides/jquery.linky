@@ -1,0 +1,34 @@
+{
+    "name": "linky",
+    "version": "0.1.6",
+    "title": "Linkify URLs, mentions & hashtags",
+    "author": {
+        "name": "Andreas Savvides",
+        "email": "andreas@editd.com",
+        "url": "https://github.com/AnSavvides"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1.10.2 - 1.11.1"
+    },
+    "description": "Linky is a jQuery plugin for linkifying URLs, mentions (for Twitter, Instagram or GitHub) and hashtags (for Twitter); that is, taking plain text references of URLs, mentions and hashtags and turning them to the appropriate links. Existing linkified URLs are kept untouched.",
+    "keywords": [
+        "jquery",
+        "linky",
+        "linkifying",
+        "mentions",
+        "hashtags",
+        "urls",
+        "twitter",
+        "instagram",
+        "github"
+    ],
+    "homepage": "http://ansavvides.github.io/jquery.linky/",
+    "docs": "http://ansavvides.github.io/jquery.linky/",
+    "bugs": "https://github.com/AnSavvides/jquery.linky/issues"
+}
