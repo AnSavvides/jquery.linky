@@ -20,6 +20,10 @@
 
     function _linkify($el, options) {
         var links = {
+                local: {
+                    baseUrl: "//domain.tld/",
+                    hashtagSearchUrl: "search/"
+                },        		
                 twitter: {
                     baseUrl: "https://twitter.com/",
                     hashtagSearchUrl: "search?q="
@@ -34,10 +38,10 @@
                 }
             },
             defaultOptions = {
-                mentions: false,
-                hashtags: false,
-                urls: true,
-                linkTo: "twitter" // Let's default to Twitter
+                mentions: true,
+                hashtags: true,
+                urls: false,
+                linkTo: "local"
             },
             extendedOptions = $.extend(defaultOptions, options),
             elContent = $el.html(),
