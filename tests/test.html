@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>jQuery Linky Tests</title>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qunit/1.12.0/qunit.min.css">
     </head>
@@ -20,6 +21,9 @@
         </div>
         <div class="hashtags">
             Need hashtags linkified? Don't worry - #wegotyoucovered!
+        </div>
+        <div class="non-english-hashtags">
+            Non english hashtags? no problem - #سهلة!
         </div>
         <div class="github-mentions">
             You can find @AnSavvides on GitHub!
@@ -65,13 +69,22 @@
                     "HTML should contain a linkified instagram mention"
                 );
 
-                expectedResponse = "Need hashtags linkified? Don't worry - <a href=\"https://twitter.com/search?q=wegotyoucovered\" target=\"_blank\">#wegotyoucovered</a>!";
+                expectedResponse = "Need hashtags linkified? Don't worry - <a href=\"https://twitter.com/hashtag/wegotyoucovered\" target=\"_blank\">#wegotyoucovered</a>!";
 
                 $(".hashtags").linky({ hashtags: true, urls: false, linkTo: "twitter" });
                 assert.equal(
                     $(".hashtags").html().trim(),
                     expectedResponse,
                     "HTML should contain a linkified twitter hashtag"
+                );
+
+                expectedResponse = "Non english hashtags? no problem - <a href=\"https://twitter.com/hashtag/سهلة\" target=\"_blank\">#سهلة</a>!";
+
+                $(".non-english-hashtags").linky({ hashtags: true, urls: false, linkTo: "twitter" });
+                assert.equal(
+                    $(".non-english-hashtags").html().trim(),
+                    expectedResponse,
+                    "HTML should contain a linkified non english twitter hashtag"
                 );
 
                 expectedResponse = "You can find <a href=\"https://github.com/AnSavvides\" target=\"_blank\">@AnSavvides</a> on GitHub!";
