@@ -22,7 +22,7 @@
         var links = {
                 twitter: {
                     baseUrl: "https://twitter.com/",
-                    hashtagSearchUrl: "search?q="
+                    hashtagSearchUrl: "hashtag/"
                 },
                 instagram: {
                     baseUrl: "http://instagram.com/",
@@ -93,7 +93,7 @@
     function _linkifyHashtags(text, links) {
         // If there is no search URL for a hashtag, there isn't much we can do
         if (links.hashtagSearchUrl === null) return text;
-        return text.replace(/(^|\s|\(|>)#(\w+)/g, "$1<a href='" + links.baseUrl + links.hashtagSearchUrl + "$2' target='_blank'>#$2</a>");
+        return text.replace(/(^|\s|\(|>)#((\w|[\u00A1-\uFFFF])+)/g, "$1<a href='" + links.baseUrl + links.hashtagSearchUrl + "$2' target='_blank'>#$2</a>");
     }
 
 }(jQuery));
