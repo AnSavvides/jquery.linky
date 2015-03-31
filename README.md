@@ -47,7 +47,7 @@ This would transform the `div`'s content to the following:
 
 ```html
 <div class="url">
-    <a href="https://twitter.com/andreassavvides" target="_blank">@andreassavvides</a> works on his <a href="https://twitter.com/search?q=opensource" target="_blank">#opensource</a> projects over at <a href="https://github.com/AnSavvides" target="_blank">https://github.com/AnSavvides</a>
+    <a href="https://twitter.com/andreassavvides" target="_blank">@andreassavvides</a> works on his <a href="https://twitter.com/hashtag/opensource" target="_blank">#opensource</a> projects over at <a href="https://github.com/AnSavvides" target="_blank">https://github.com/AnSavvides</a>
 </div>
 ```
 
