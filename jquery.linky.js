@@ -3,7 +3,7 @@
  * https://github.com/AnSavvides/jquery.linky
  * The MIT License (MIT)
  *
- * Copyright (c) 2013 - 2014 Andreas Savvides
+ * Copyright (c) 2013 - 2015 Andreas Savvides
  */
 (function($) {
 
