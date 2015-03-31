@@ -62,7 +62,7 @@ All contributions are welcome; just fork the repository, make your changes and o
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2013 - 2014 Andreas Savvides
+Copyright (c) 2013 - 2015 Andreas Savvides
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
