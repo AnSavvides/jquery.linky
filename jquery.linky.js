@@ -82,7 +82,7 @@
         return elContent;
     }
 
-    // Find any mentions (e.g. @andreassavvides) and turn them into links that
+    // Find any mentions (e.g. @andrs) and turn them into links that
     // refer to the appropriate social profile (e.g. twitter or instagram).
     function _linkifyMentions(text, baseUrl) {
         return text.replace(/(^|\s|\(|>)@(\w+)/g, "$1<a href='" + baseUrl + "$2' target='_blank'>@$2</a>");
