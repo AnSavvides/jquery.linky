@@ -35,7 +35,7 @@ If you are displaying this information in your UI, you would want to linkify any
 ```
 
 ```js
-$(".tweet").linkify({
+$(".tweet").linky({
     mentions: true,
     hashtags: true,
     urls: true,
