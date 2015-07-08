@@ -26,7 +26,7 @@
                 },
                 instagram: {
                     baseUrl: "http://instagram.com/",
-                    hashtagSearchUrl: null // Doesn't look like there is one?
+                    hashtagSearchUrl: "explore/tags/"
                 },
                 github: {
                     baseUrl: "https://github.com/",
