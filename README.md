@@ -24,13 +24,13 @@ Linky is also available as a Bower package; you can simply install it by doing `
 
 Linky would come in handy if you are pulling data from any of Twitter's or Instagram's APIs where you will end up having just a plain text string like below:
 
-`@andreassavvides works on his #opensource projects over at https://github.com/AnSavvides`
+`@andrs works on his #opensource projects over at https://github.com/AnSavvides`
 
 If you are displaying this information in your UI, you would want to linkify any mentions, hashtags and/or URLs. Linky does exactly that, giving you control over what you want linkified. In this case, let's linkify everything given a `div` containing the aforementioned tweet:
 
 ```html
 <div class="tweet">
-    @andreassavvides works on his #opensource projects over at https://github.com/AnSavvides        
+    @andrs works on his #opensource projects over at https://github.com/AnSavvides        
 </div>
 ```
 
@@ -47,7 +47,7 @@ This would transform the `div`'s content to the following:
 
 ```html
 <div class="url">
-    <a href="https://twitter.com/andreassavvides" target="_blank">@andreassavvides</a> works on his <a href="https://twitter.com/hashtag/opensource" target="_blank">#opensource</a> projects over at <a href="https://github.com/AnSavvides" target="_blank">https://github.com/AnSavvides</a>
+    <a href="https://twitter.com/andrs" target="_blank">@andrs</a> works on his <a href="https://twitter.com/hashtag/opensource" target="_blank">#opensource</a> projects over at <a href="https://github.com/AnSavvides" target="_blank">https://github.com/AnSavvides</a>
 </div>
 ```
 

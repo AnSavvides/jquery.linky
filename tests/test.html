@@ -11,10 +11,10 @@
             https://github.com/AnSavvides should turn into a link
         </div>
         <div class="url-with-link">
-            <a href="https://twitter.com/andreassavvides">This link should stay untouched</a>. While https://github.com/AnSavvides should turn into a link.
+            <a href="https://twitter.com/andrs">This link should stay untouched</a>. While https://github.com/AnSavvides should turn into a link.
         </div>
         <div class="twitter-mentions">
-            @andreassavvides should get highlighted! Not an e-mail such as hello@example.com though.
+            @andrs should get highlighted! Not an e-mail such as hello@example.com though.
         </div>
         <div class="instagram-mentions">
             We do instagram too! Check out @instagram!
@@ -42,7 +42,7 @@
                     "HTML should contain a linkified URL."
                 );
 
-                expectedResponse = "<a href=\"https://twitter.com/andreassavvides\">This link should stay untouched</a>. While <a href=\"https://github.com/AnSavvides\" target=\"_blank\">https://github.com/AnSavvides</a> should turn into a link.";
+                expectedResponse = "<a href=\"https://twitter.com/andrs\">This link should stay untouched</a>. While <a href=\"https://github.com/AnSavvides\" target=\"_blank\">https://github.com/AnSavvides</a> should turn into a link.";
 
                 $(".url-with-link").linky();
                 assert.equal(
@@ -51,7 +51,7 @@
                     "HTML should contain a linkified URL and a link that has remained unchanged."
                 );
 
-                expectedResponse = "<a href=\"https://twitter.com/andreassavvides\" target=\"_blank\">@andreassavvides</a> should get highlighted! Not an e-mail such as hello@example.com though.";
+                expectedResponse = "<a href=\"https://twitter.com/andrs\" target=\"_blank\">@andrs</a> should get highlighted! Not an e-mail such as hello@example.com though.";
 
                 $(".twitter-mentions").linky({ mentions: true, urls: false, linkTo: "twitter" });
                 assert.equal(
