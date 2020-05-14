@@ -75,7 +75,8 @@
             // Only linkify URLs that are not already identified as
             // `a` elements with an `href`.
             if ($el.find("a[href='" + this + "']").length === 0) {
-                elContent = elContent.replace(this, "<a href='" + this + "' target='_blank'>" + this + "</a>");
+                let addr = this.includes("@")?"mailto:" + this:this;
+                elContent = elContent.replace(this, "<a href='" + addr + "' target='_blank'>" + this + "</a>");
             }
         });
 
